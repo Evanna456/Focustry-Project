@@ -6,30 +6,6 @@ Focus your time. Get better everyday. An app that allows collaborative study hab
 
 * 1.)Download and Install [NodeJS 18.x Runtime](https://nodejs.org/en/)
 
-* 2.)Install Yarn and Install Quasar CLI 
-
-```bash
-npm install --global yarn
-```
-```bash
-yarn global add @quasar/cli
-```
-
-* 3.)Install Dependencies
-```bash
-yarn install
-```
-
-* 4.)Run the Project
-```bash
-yarn quasar dev
-```
-
-* 5.)Build
-```bash
-yarn quasar build
-```
-
 ## QuasarJS
 
 <p align="center"><img src="https://i.imgur.com/RjjykYC.png" width="150px" height="auto" alt="Logo"></a></p>
