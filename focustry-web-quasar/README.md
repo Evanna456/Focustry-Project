@@ -2,10 +2,6 @@
 
 Focus your time. Get better everyday. An app that allows collaborative study habits with goodies.
 
-## Usage
-
-* 1.)Download and Install [NodeJS 18.x Runtime](https://nodejs.org/en/)
-
 ## QuasarJS
 
 <p align="center"><img src="https://i.imgur.com/RjjykYC.png" width="150px" height="auto" alt="Logo"></a></p>
