@@ -2,11 +2,6 @@
 
 Focus your time. Get better everyday. An app that allows collaborative study habits with goodies.
 
-## Usage
-
-* 1.)Download and Install [.NET 8 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
-* 2.)Run Executable.
-
 ## ASP.NET Core
 
 <p align="center"><img src="https://i.imgur.com/dzHmxlz.png" width="150px" height="auto" alt="Logo"></a></p>
