@@ -1,41 +1,49 @@
-# focustry (focustry-web-quasar)
+## Focustry
 
 Focus your time. Get better everyday. An app that allows collaborative study habits with goodies.
 
-## Install the dependencies
+## Usage
+
+* 1.)Download and Install [NodeJS 18.x Runtime](https://nodejs.org/en/)
+
+* 2.)Install Yarn and Install Quasar CLI 
+
 ```bash
-yarn
-# or
-npm install
+npm install --global yarn
+```
+```bash
+yarn global add @quasar/cli
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+* 3.)Install Dependencies
 ```bash
-quasar dev
+yarn install
 ```
 
-
-### Lint the files
+* 4.)Run the Project
 ```bash
-yarn lint
-# or
-npm run lint
+yarn quasar dev
 ```
 
-
-### Format the files
+* 5.)Build
 ```bash
-yarn format
-# or
-npm run format
+yarn quasar build
 ```
 
+## QuasarJS
 
+<p align="center"><img src="https://i.imgur.com/RjjykYC.png" width="150px" height="auto" alt="Logo"></a></p>
 
-### Build the app for production
-```bash
-quasar build
-```
+<p>Quasar (pronounced /ˈkweɪ.zɑɹ/) is an MIT licensed open-source Vue.js based framework, which allows you as a web developer to quickly create responsive++ websites/apps in many flavours:</p>
 
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+<ul>
+<li>SPAs (Single Page App)</li>
+<li>SSR (Server-side Rendered App) (+ optional PWA client takeover)</li>
+<li>PWAs (Progressive Web App)</li>
+<li>BEX (Browser Extension)</li>
+<li>Mobile Apps (Android, iOS, …) through Cordova or Capacitor</li>
+<li>Multi-platform Desktop Apps (using Electron).</li>
+</ul>
+
+* [Github](https://github.com/quasarframework/quasar)
+* [Documentation](https://quasar.dev/docs)
