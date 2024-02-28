@@ -1,21 +1,41 @@
-## Focustry
+# focustry (focustry-web-quasar)
 
-Focus your time. Get better everyday. An app that allows collaborative study habits with goodies.
+A study app that allows collaboration and aggregation of knowledge.
 
-## QuasarJS
+## Install the dependencies
+```bash
+yarn
+# or
+npm install
+```
 
-<p align="center"><img src="https://i.imgur.com/RjjykYC.png" width="150px" height="auto" alt="Logo"></a></p>
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
+```bash
+quasar dev
+```
 
-<p>Quasar (pronounced /ˈkweɪ.zɑɹ/) is an MIT licensed open-source Vue.js based framework, which allows you as a web developer to quickly create responsive++ websites/apps in many flavours:</p>
 
-<ul>
-<li>SPAs (Single Page App)</li>
-<li>SSR (Server-side Rendered App) (+ optional PWA client takeover)</li>
-<li>PWAs (Progressive Web App)</li>
-<li>BEX (Browser Extension)</li>
-<li>Mobile Apps (Android, iOS, …) through Cordova or Capacitor</li>
-<li>Multi-platform Desktop Apps (using Electron).</li>
-</ul>
+### Lint the files
+```bash
+yarn lint
+# or
+npm run lint
+```
 
-* [Github](https://github.com/quasarframework/quasar)
-* [Documentation](https://quasar.dev/docs)
+
+### Format the files
+```bash
+yarn format
+# or
+npm run format
+```
+
+
+
+### Build the app for production
+```bash
+quasar build
+```
+
+### Customize the configuration
+See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
