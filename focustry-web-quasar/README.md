@@ -19,7 +19,3 @@
 
 * [Github](https://github.com/quasarframework/quasar)
 * [Documentation](https://quasar.dev/docs)
-
-## License
-
-<p>Focustry is licensed under [MIT](https://choosealicense.com/licenses/mit/)</p>
