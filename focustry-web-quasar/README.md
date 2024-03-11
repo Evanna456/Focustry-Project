@@ -8,6 +8,7 @@
 | ------- | ------ | ---------- | -------- |
 | LoginPage | Ongoing | Evanna | <ul><li>- [x] Login Form</li><li>- [ ] Login Functions</li></ul> |
 | RegisterPage | Pending | | <ul><li>- [ ] Register Form</li><li>- [ ] Register Functions</li></ul> |
+| IndexPage | Pending | | <ul><li>- [ ] Chat Form</li><li>- [ ] Chat Functions</li></ul> |
 
 ## QuasarJS
 
