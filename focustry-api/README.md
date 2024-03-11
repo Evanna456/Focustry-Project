@@ -21,7 +21,8 @@
 
 | Task    | Status | Developer  | Items    | 
 | ------- | ------ | ---------- | -------- |
-| RegisterAPI | Ongoing | Evanna | <ul><li>- [x] url</li><li>- [ ] Validation and Sanitation</li><li>- [ ] Query</li></ul> |
+| Database | Ongoing | Evanna | <ul><li>- [ ] Design</li></ul> |
+| RegisterAPI | Ongoing | Evanna | <ul><li>- [x] URL</li><li>- [ ] Validation and Sanitation</li><li>- [ ] Query</li></ul> |
 
 ## ASP.NET Core
 
