@@ -1,10 +1,6 @@
 ## Focustry
 
-Focus your time. Get better everyday. An app that allows collaborative study habits with goodies.
-
-| Task    | Status | Developer  | Items    | 
-| ------- | ------ | ---------- | -------- |
-| RegisterAPI | Ongoing | Evanna | <ul><li>- [x] url</li><li>- [ ] Validation and Sanitation</li><li>- [ ] Query</li></ul> |
+<p align="center">Focus your time. Get better everyday. An app that allows collaborative study habits with goodies.</p>
 
 ### API
 
@@ -12,16 +8,20 @@ Focus your time. Get better everyday. An app that allows collaborative study hab
 ```
 /api/register
 ```
+<p>Register User</p>
 
 | Parameter | Description |
 | --------- | ----------- |
-| firstname | Register User | 
-| lastname | Register User | 
-| username | Register User | 
-| password | Register User | 
+| firstname | User Details | 
+| lastname | User Details | 
+| username | User Credential | 
+| password | User Credential | 
 
+## Roadmap
 
-
+| Task    | Status | Developer  | Items    | 
+| ------- | ------ | ---------- | -------- |
+| RegisterAPI | Ongoing | Evanna | <ul><li>- [x] url</li><li>- [ ] Validation and Sanitation</li><li>- [ ] Query</li></ul> |
 
 ## ASP.NET Core
 
