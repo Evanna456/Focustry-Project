@@ -1,4 +1,5 @@
-﻿using focustry_api.Models;
+﻿using Dapper;
+using focustry_api.Models;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 using System.Web;
@@ -11,7 +12,7 @@ namespace focustry_api.Controllers
     {
         [Route("/api/register")]
         [HttpGet]
-        public void register()
+        public IActionResult register()
         {
             string firstname = HttpUtility.HtmlAttributeEncode(Convert.ToString(Request.Query["firstname"]));
             string lastname = HttpUtility.HtmlAttributeEncode(Convert.ToString(Request.Query["lastname"]));
@@ -21,11 +22,13 @@ namespace focustry_api.Controllers
             List<Users> customers = new List<Users>();
             var connectionString = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["Default"];
 
-
             using (var connection = new MySqlConnection(connectionString))
             {
-
+                var anonymousCustomer = new { first = "Evanna", last = "Tabs" };
+                var sql = "INSERT INTO users (id, firstname, lastname) VALUES ('',@first, @last)";
+                connection.Execute(sql, anonymousCustomer);
             }
+            return StatusCode(200);
         }
     }
 }
