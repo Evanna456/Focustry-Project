@@ -10,5 +10,7 @@ app.UseWhen(context => context.Request.Path.StartsWithSegments("/api"), appBuild
     appBuilder.UseMiddleware<UserMiddleware>();
 });
 
+builder.Configuration.GetConnectionString("BloggingDatabase");
+
 app.MapControllers();
 app.Run();
