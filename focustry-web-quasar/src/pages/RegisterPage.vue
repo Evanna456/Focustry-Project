@@ -87,24 +87,45 @@
 <style scoped></style>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-//const axios = require('axios/dist/node/axios.cjs');
+import { defineComponent, PropType } from 'vue';
+import Validator from '../../public/libs/lara-validationjs/validator.js';
 import axios from 'axios';
-
+import Users from '../models/Users';
 export default defineComponent({
   name: 'RegisterPage',
+  props: {
+    users: {
+      type: Object as PropType<Users>,
+    },
+  },
   data: function () {
     return {
-      firstname: '',
-      lastname: '',
-      username: '',
-      password: '',
+      firstname: this.$props.users?.FirstName,
+      lastname: this.$props.users?.LastName,
+      username: this.$props.users?.Username,
+      password: this.$props.users?.Password,
     };
   },
   methods: {
     registerUser() {
-      console.log(this.$data.firstname + ' ' + this.$data.lastname);
-
+      const _validator = new Validator();
+      var data = this.$data;
+      _validator.make(
+        data,
+        {
+          firstname: 'required',
+          lastname: 'required',
+          username: 'required',
+          password: 'required',
+        },
+        (messages: any) => {
+          required: 'The :attribute field is required';
+        },
+      );
+      if (_validator.fails()) {
+        alert(_validator.first().error);
+        return;
+      }
       axios
         .post(
           'http://localhost:8000/api/register',
@@ -129,3 +150,4 @@ export default defineComponent({
   },
 });
 </script>
+../models/Users.js
