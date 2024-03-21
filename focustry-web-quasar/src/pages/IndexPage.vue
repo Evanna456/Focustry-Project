@@ -31,9 +31,14 @@
                   clip-rule="evenodd"
                 />
               </svg>
-              <input type="password" class="grow" value="password" />
+              <input type="password" class="grow" />
             </label>
             <button class="btn btn-wide w-full">Login</button>
+            <small
+              v-on:click="$router.push('/register')"
+              style="cursor: pointer"
+              >I don't have an account yet</small
+            >
           </div>
         </div>
       </div>

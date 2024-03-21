@@ -3,30 +3,29 @@ using focustry_api.Models;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 using System.Web;
-namespace focustry_api.Controllers
+using BC = BCrypt.Net.BCrypt;
 
+namespace focustry_api.Controllers
 {
     [ApiController]
     [Controller]
     public class UserController : Controller
     {
         [Route("/api/register")]
-        [HttpGet]
-        public IActionResult register()
+        [HttpPost]
+        public IActionResult register(Users user)
         {
-            string firstname = HttpUtility.HtmlAttributeEncode(Convert.ToString(Request.Query["firstname"]));
-            string lastname = HttpUtility.HtmlAttributeEncode(Convert.ToString(Request.Query["lastname"]));
-            string username = HttpUtility.HtmlAttributeEncode(Convert.ToString(Request.Query["username"]));
-            string email = HttpUtility.HtmlAttributeEncode(Convert.ToString(Request.Query["email"]));
-
-            List<Users> customers = new List<Users>();
+            string firstname = HttpUtility.HtmlAttributeEncode(user.firstname);
+            string lastname = HttpUtility.HtmlAttributeEncode(user.lastname);
+            string username = HttpUtility.HtmlAttributeEncode(user.username);
+            string password = HttpUtility.HtmlAttributeEncode(user.password);
+            string hashed_password = BC.HashPassword(password);
             var connectionString = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["Default"];
-
             using (var connection = new MySqlConnection(connectionString))
             {
-                var anonymousCustomer = new { first = "Evanna", last = "Tabs" };
-                var sql = "INSERT INTO users (id, firstname, lastname) VALUES ('',@first, @last)";
-                connection.Execute(sql, anonymousCustomer);
+                var user_v = new { Firstname = firstname, Lastname = lastname, Username = username, Password = hashed_password };
+                var sql = "INSERT INTO users (id, role_id, firstname, lastname, username, password, api_key) VALUES ('', 1,@Firstname, @Lastname, @Username, @Password, '')";
+                connection.QueryAsync<Users>(sql, user_v);
             }
             return StatusCode(200);
         }
