@@ -2,14 +2,6 @@
 
 <p>A study app that allows collaboration and aggregation of knowledge.</p>
 
-## Roadmap
-
-| Task    | Status | Developer  | Items    | 
-| ------- | ------ | ---------- | -------- |
-| LoginPage | Ongoing | Evanna | <ul><li>- [x] Login Form</li><li>- [ ] Login Functions</li></ul> |
-| RegisterPage | Pending | | <ul><li>- [ ] Register Form</li><li>- [ ] Register Functions</li></ul> |
-| IndexPage | Pending | | <ul><li>- [ ] Chat Form</li><li>- [ ] Chat Functions</li></ul> |
-
 ## QuasarJS
 
 <p align="center"><img src="https://i.imgur.com/RjjykYC.png" width="150px" height="auto" alt="Logo"></a></p>
