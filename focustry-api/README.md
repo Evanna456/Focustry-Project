@@ -2,28 +2,6 @@
 
 <p align="center">Focus your time. Get better everyday. An app that allows collaborative study habits with goodies.</p>
 
-### API
-
-`POST`
-```
-/api/register
-```
-<p>Register User</p>
-
-| Parameter | Description |
-| --------- | ----------- |
-| firstname | User Details | 
-| lastname | User Details | 
-| username | User Credential | 
-| password | User Credential | 
-
-## Roadmap
-
-| Task    | Status | Developer  | Items    | 
-| ------- | ------ | ---------- | -------- |
-| Database | Ongoing | Evanna | <ul><li>- [ ] Design</li></ul> |
-| RegisterAPI | Ongoing | Evanna | <ul><li>- [x] URL</li><li>- [ ] Validation and Sanitation</li><li>- [ ] Query</li></ul> |
-
 ## ASP.NET Core
 
 <p align="center"><img src="https://i.imgur.com/dzHmxlz.png" width="150px" height="auto" alt="Logo"></a></p>
