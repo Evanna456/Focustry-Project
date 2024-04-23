@@ -8,6 +8,6 @@
         public string? lastname { get; set; }
         public string? username { get; set; }
         public string? password { get; set; }
-        public string? api_key { get; set; }
+        public string? token { get; set; }
     }
 }
