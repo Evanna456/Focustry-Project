@@ -15,16 +15,19 @@ namespace focustry_api.Controllers
         [HttpPost]
         public IActionResult register(Users user)
         {
-            string firstname = HttpUtility.HtmlAttributeEncode(user.firstname);
-            string lastname = HttpUtility.HtmlAttributeEncode(user.lastname);
-            string username = HttpUtility.HtmlAttributeEncode(user.username);
-            string password = HttpUtility.HtmlAttributeEncode(user.password);
+            string firstname = HttpUtility.HtmlAttributeEncode(user.firstname)!;
+            string lastname = HttpUtility.HtmlAttributeEncode(user.lastname)!;
+            string username = HttpUtility.HtmlAttributeEncode(user.username)!;
+            string password = HttpUtility.HtmlAttributeEncode(user.password)!;
             string hashed_password = BC.HashPassword(password);
+
+
+
             var connectionString = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["Default"];
             using (var connection = new MySqlConnection(connectionString))
             {
                 var user_v = new { Firstname = firstname, Lastname = lastname, Username = username, Password = hashed_password };
-                var sql = "INSERT INTO users (id, role_id, firstname, lastname, username, password, api_key) VALUES ('', 1,@Firstname, @Lastname, @Username, @Password, '')";
+                var sql = "INSERT INTO users (id, role_id, firstname, lastname, username, password, token) VALUES ('', 1,@Firstname, @Lastname, @Username, @Password, '')";
                 connection.QueryAsync<Users>(sql, user_v);
             }
             return StatusCode(200);
